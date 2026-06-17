@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run ebrit-hands",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "ebrit_hands",
+            "cwd": "${workspaceFolder}/ebrit_hands",
+            "python": "${workspaceFolder}/ebrit_hands/.venv/bin/python",
+            "justMyCode": true,
+            "postDebugTask": "cleanup"
+        },
+        {
+            "name": "Debug gitlab-channel",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "ebrit_hands_gitlab_channel",
+            "cwd": "${workspaceFolder}/ebrit_hands_gitlab_channel",
+            "python": "${workspaceFolder}/ebrit_hands_gitlab_channel/.venv/bin/python",
+            "justMyCode": true,
+            "postDebugTask": "cleanup"
+        },
+        {
+            "name": "Debug ytrack-channel",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "ebrit_hands_ytrack_channel",
+            "cwd": "${workspaceFolder}/ebrit_hands_ytrack_channel",
+            "python": "${workspaceFolder}/ebrit_hands_ytrack_channel/.venv/bin/python",
+            "justMyCode": true,
+            "postDebugTask": "cleanup"
+        }
+    ]
+}

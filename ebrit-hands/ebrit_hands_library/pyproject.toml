@@ -1,0 +1,20 @@
+[project]
+name = "ebrit-hands-library"
+version = "0.1.0"
+description = "Shared utilities for ebrit-hands services"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "httpx>=0.27.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ebrit_hands_library"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]

@@ -1,0 +1,6 @@
+FROM ghcr.io/openhands/agent-server:latest-python
+
+USER root
+RUN curl -sSL https://dot.net/v1/dotnet-install.sh | bash -s -- --channel 9.0 --install-dir /usr/local/dotnet
+ENV PATH="$PATH:/usr/local/dotnet"
+USER openhands

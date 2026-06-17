@@ -1,0 +1,26 @@
+{
+    "editor.formatOnSave": true,
+    "python.analysis.extraPaths": [
+        "./ebrit_hands_library"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/*.pyo": true,
+        "**/.mypy_cache": true,
+        "**/.ruff_cache": true,
+        "**/.pytest_cache": true,
+        "**/*.egg-info": true,
+        "**/dist": true,
+        "**/build": true,
+        "**/.coverage": true,
+        "**/.venv": true,
+        "**/uv.lock": true,
+        "**/node_modules": true,
+        "**/.pnpm-store": true,
+        "**/*.tsbuildinfo": true
+    }
+}

@@ -1,0 +1,32 @@
+[project]
+name = "ebrit-hands"
+version = "0.1.0"
+description = ""
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "ebrit-hands-library",                    # shared logging and utilities (path via uv.sources)
+    "fastapi>=0.136.3",           # HTTP server to receive tasks
+    "gitpython>=3.1.50",          # git clone and local repo operations
+    "openhands-sdk>=1.24.0",      # OpenHands client — sending tasks to an OpenHands instance
+    "openhands-tools>=1.24.0",    # LangChain-compatible tools wrapping OpenHands actions
+    "openhands-workspace>=1.24.0", # workspace/sandbox management for OpenHands agents
+    "pydantic-settings>=2.14.1",  # settings loaded from .env files
+    "uvicorn[standard]>=0.48.0",  # ASGI server
+    "python-gitlab>=8.4.0",       # GitLab REST API — MR, comments, clone, issues # settings loaded from .env files
+    "lmnr>=0.7.52",               # Laminar observability — tracing for LLM calls and agent runs
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+ebrit-hands-library = { path = "../ebrit_hands_library", editable = true }
+
+[tool.hatch.build.targets.wheel]
+packages = ["ebrit_hands"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
